@@ -52,18 +52,4 @@ plt.legend(loc='lower right')
 plt.savefig("figs/cap_effect.png")
 plt.show()
 
-'''
-plt.figure()
-for bbu in range(1,7,1):
-    r = -((C*(bbu/5))/7)*d+(8*C/7)
-    Price = 0.5*(mu*np.exp(-tau*(r/C))+phi) +0.5*((0.318)*np.arctan(3*(d - 1.3)) + 1.1)
-    label = "bbu = "+ str(bbu)
-    plt.plot(d,Price,label=label)
 
-
-plt.xlabel('Arrival Rate')
-plt.ylabel('Price')
-plt.legend(loc='lower right')
-plt.savefig("figs/bbu_effect.png")
-plt.show()
-'''
