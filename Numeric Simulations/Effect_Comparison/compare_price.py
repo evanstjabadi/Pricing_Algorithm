@@ -30,23 +30,28 @@ a = 0.159
 b = 0.7
 c = 2
 
-d = np.arange(0,10,1) # Arrival Rate
-r = -14.3*d+114      # Remaining resources
+d = [0,1,2,3,4,5,6,7] # Arrival Rate
+Price_P = []
 
-Price = a*np.arctan(b*(d - c)) + mu*np.exp(-tau*(r/C)-gam)+ phi
+for e in d:
+    r = -14.3*e+114      # Remaining resources
+    P = a*np.arctan(b*(e - c)) + mu*np.exp(-tau*(r/C)-gam)+ phi
+    Price_P.append(P)
+
 
 
 plt.xlabel('Arrival Rate')
 plt.ylabel('Price')
 
 
-plt.plot(d,Price,label="Designed")
+plt.plot(d,Price_P,label="Designed")
 #plt.savefig("figs/Sliced_Price.png")
 
-compare1 = [0.735,0.8,0.97, 0.985, 1, 1.01, 1.02, 1.03, 1.04,1.05]
+compare1 = [0.735,0.75,0.765,0.78,0.79,0.8,0.81,0.82]
 compare_p = []
+
 for i in compare1:
-    compare_p.append(i+0.2)
+    compare_p.append(i+0.3)
 
 plt.plot(d,compare_p,label="Comparison 1")
 plt.legend(loc='lower right')
