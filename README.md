@@ -11,7 +11,7 @@ Partial effect of arrival rate (demand) and remaining resources (supply) were an
 ...contains the numeric simulation for the 3D ("full3dpricefunction.py") and 2D ("full2dpricefunction.py") price map to arrival rate and to remaining resource. Random calls were generated in "random.py" and the revenue from the calls was calculated in the "revenue.py"
 
 
-3."Effect_Comparison" folder:
+3. "Effect_Comparison" folder:
 The "effect.py" analyses the effect of capacity. 
 "linear.py" compares this function with linear schemes
 "compare_price.py" compares this price update function to literature paper.
